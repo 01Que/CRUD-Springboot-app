@@ -1,0 +1,34 @@
+#to check the list of your container
+docker ps
+
+#to execute command through shell container
+docker exec -it <name of your container> bash
+
+#use psql client to connect to your postgres workbanch
+psql -U <database username>
+
+#to list database
+\l
+
+#to create database
+CREATE DATABASE <name of the database>;
+
+#to cancel your database connection and switch to container shell
+\q
+ctrl + d
+
+#to connect to your created database
+\c <database name>
+
+#to list relations
+\dt
+
+#to list all relations
+\d
+
+#to view your database(table) rows and columns
+select * from <database name> (this is sql syntax)
+
+#to explicity store data to your database
+INSERT INTO <database name>(id, age, name, email) VALUES(nextval('customer_id_sequence'), "age vale", "name value", "email value")
+
